@@ -1,0 +1,27 @@
+# CMake generation dependency list for this directory.
+D:/Life Hub/Burbano-University/Trading-Platform/CMakeLists.txt
+D:/Life Hub/Burbano-University/Trading-Platform/build/CMakeFiles/4.4.3/CMakeCXXCompiler.cmake
+D:/Life Hub/Burbano-University/Trading-Platform/build/CMakeFiles/4.4.3/CMakeRCCompiler.cmake
+D:/Life Hub/Burbano-University/Trading-Platform/build/CMakeFiles/4.4.3/CMakeSystem.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/CMakeCXXInformation.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/CMakeCommonLanguageInclude.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/CMakeGenericSystem.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/CMakeInitializeConfigs.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/CMakeLanguageInformation.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/CMakeRCInformation.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInformation.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/CMakeSystemSpecificInitialize.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/Compiler/MSVC-CXX.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/Compiler/MSVC.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/Internal/CMakeCXXLinkerInformation.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/Internal/CMakeCommonLinkerInformation.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/Linker/MSVC-CXX.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/Linker/MSVC.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/Platform/Linker/Windows-MSVC-CXX.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/Platform/Linker/Windows-MSVC.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/Platform/Windows-Initialize.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/Platform/Windows-MSVC-CXX.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/Platform/Windows-MSVC.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/Platform/Windows.cmake
+E:/Programming/CMake/share/cmake-4.4/Modules/Platform/WindowsPaths.cmake

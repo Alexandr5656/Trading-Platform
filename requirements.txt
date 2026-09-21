@@ -1,0 +1,3 @@
+# Python environment for the research/orchestration layer.
+# No packages needed yet — this file exists to make the venv reproducible
+# and will grow as Python work starts (backtesting, Alpaca integration, etc.)

@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"D:/Life Hub/Burbano-University/Trading-Platform/build/cmake_install.cmake",
+		"D:/Life Hub/Burbano-University/Trading-Platform/build/cpp/week01/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

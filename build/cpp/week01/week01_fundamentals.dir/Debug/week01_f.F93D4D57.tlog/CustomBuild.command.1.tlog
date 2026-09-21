@@ -1,0 +1,10 @@
+^D:\LIFE HUB\BURBANO-UNIVERSITY\TRADING-PLATFORM\CPP\WEEK01\CMAKELISTS.TXT
+setlocal
+E:\Programming\CMake\bin\cmake.exe "-SD:/Life Hub/Burbano-University/Trading-Platform" "-BD:/Life Hub/Burbano-University/Trading-Platform/build" --check-stamp-file "D:/Life Hub/Burbano-University/Trading-Platform/build/cpp/week01/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

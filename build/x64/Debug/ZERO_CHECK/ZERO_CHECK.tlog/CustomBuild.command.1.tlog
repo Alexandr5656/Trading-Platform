@@ -1,0 +1,10 @@
+^D:\LIFE HUB\BURBANO-UNIVERSITY\TRADING-PLATFORM\BUILD\CMAKEFILES\E97D389A3D47CD1472AEC571F34A5BBC\GENERATE.STAMP.RULE
+setlocal
+E:\Programming\CMake\bin\cmake.exe "-SD:/Life Hub/Burbano-University/Trading-Platform" "-BD:/Life Hub/Burbano-University/Trading-Platform/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/Life Hub/Burbano-University/Trading-Platform/build/TradingPlatform.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
