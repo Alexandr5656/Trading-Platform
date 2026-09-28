@@ -19,4 +19,6 @@ cmake --build build
 ## Layout
 
 - `cpp/week01/` — Week 1 C++ fundamentals exercises (stack vs. heap, const-correctness).
+- `cpp/week02/` — Week 2 RAII exercise (resource-owning class, Rule of Five/Zero, exception safety).
+- `python/data/` — Stage 2 on-ramp: timestamp/data normalization module.
 - `requirements.txt` — Python environment definition.
