@@ -1,30 +1,57 @@
 """
-Timestamp/data normalization for a market-data source (Stage 2 on-ramp).
+Timestamp/data normalization for Stage 2.
 
-TODO: pick a data source (placeholder CSV, synthetic series, or a real
-free source) and describe it here: what it is, what shape it arrives in,
-and what this module normalizes it into (e.g. a common OHLCV schema with
-UTC-normalized timestamps).
+Input CSV columns:
+    timestamp,symbol,price,volume
 
-Doesn't need to be complete or tested yet -- this is the Week 2 on-ramp,
-full Stage 2 build-out comes later.
+This module normalizes each row into:
+    - UTC timestamp
+    - uppercase symbol
+    - float price
+    - float volume
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass
+from datetime import datetime, timezone
 
 
 @dataclass
 class NormalizedRecord:
-    # TODO: define the normalized shape this module produces, e.g.:
-    # timestamp_utc: datetime
-    # symbol: str
-    # price: float
-    # volume: float
-    pass
+    timestamp_utc: datetime
+    symbol: str
+    price: float
+    volume: float
 
 
 def normalize(raw_row: dict) -> NormalizedRecord:
-    """TODO: convert one raw row from the chosen source into a NormalizedRecord."""
-    raise NotImplementedError
+    timestamp = str(raw_row["timestamp"]).strip()
+
+    # Unix timestamp
+    if timestamp.isdigit():
+        dt = datetime.fromtimestamp(int(timestamp), tz=timezone.utc)
+
+    # ISO / normal datetime formats
+    else:
+        timestamp = timestamp.replace("Z", "+00:00")
+
+        try:
+            dt = datetime.fromisoformat(timestamp)
+        except ValueError:
+            dt = datetime.strptime(timestamp, "%m/%d/%Y %H:%M:%S")
+
+        # Assume timestamps without timezone information are UTC for now.
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+
+        dt = dt.astimezone(timezone.utc)
+
+    volume = raw_row.get("volume")
+
+    return NormalizedRecord(
+        timestamp_utc=dt,
+        symbol=str(raw_row["symbol"]).strip().upper(),
+        price=float(raw_row["price"]),
+        volume=float(volume) if volume else 0.0,
+    )
