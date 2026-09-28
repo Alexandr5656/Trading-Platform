@@ -1,1 +1,4 @@
 build/
+build-sanitized/
+__pycache__/
+*.pyc

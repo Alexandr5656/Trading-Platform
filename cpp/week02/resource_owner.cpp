@@ -2,13 +2,13 @@
 
 #include <iostream>
 
-ResourceOwner::ResourceOwner(int buffLength) : rawBuff(new int[buffLength]), buffLength(buffLength) {
+ResourceOwner::ResourceOwner(int buffLength) : buffLength(buffLength), rawBuff(new int[buffLength]) {
     std::cout << "ResourceOwner: acquired\n";
 }
 
 ResourceOwner::ResourceOwner(const ResourceOwner& other)
-    : rawBuff(new int[other.buffLength]),       // matches declaration order in the header (rawBuff, then buffLength)
-      buffLength(other.buffLength)
+    : buffLength(other.buffLength),             // matches declaration order in the header (buffLength, then rawBuff)
+      rawBuff(new int[other.buffLength])
 {
     std::copy(other.rawBuff, other.rawBuff + buffLength, rawBuff);
 }
@@ -24,7 +24,7 @@ ResourceOwner& ResourceOwner::operator=(const ResourceOwner& other) {
     return *this;
 }
 
-ResourceOwner::ResourceOwner(ResourceOwner&& other) noexcept : rawBuff(other.rawBuff), buffLength(other.buffLength) {
+ResourceOwner::ResourceOwner(ResourceOwner&& other) noexcept : buffLength(other.buffLength), rawBuff(other.rawBuff) {
     other.rawBuff = nullptr;
     other.buffLength = 0;
 }
